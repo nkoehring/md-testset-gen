@@ -39,7 +39,7 @@ def gen_content(n, title)
 end
 
 
-10.times do |n|
+1000.times do |n|
   title = Cicero.words(3 + rand(4))
   slug = title.downcase.gsub(' ', '_')
   File.open("#{n}_#{slug}.md", 'w') { |f| f.write(gen_content(n, title)) }
